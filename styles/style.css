@@ -9,6 +9,17 @@
 .display-flex{
     display: flex;
 }
+main{
+max-width: 1440px;
+margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+font-size: 2.8rem;
+font-weight: 700;
+}
 /*dark 02*/
 .text-gray{
     color: #424242;
@@ -16,6 +27,8 @@
 /*dark 03*/
 .text-light-gray{
 color: #727272;
+
+
 }
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
@@ -75,9 +88,88 @@ color: #727272;
     max-width: 100%;
 }
 
+/*team and feature related styles*/
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-features{
+    margin-left: 73px;
+    max-width: 537px;
+}
+.quick-list{
+font-weight: 400px;
+font-size: 3rem;
+}
+.of-our{
+    font-weight: bold;
+    font-size: 3rem;
+    color: black;
+}
+.features{
+    font-weight: bold;
+    font-size: 3rem;
+    color: #FF900E;
+}
+/*some fact related style*/
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 242px;
+    height: 242px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+   
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600px;
+    margin-top: 10;
+}
+.fact-description{
+    max-width: 540px;
+}
+
 /*reponsive media query*/
+/*small device*/
 @media screen and (max-width:576px) {
-    .navbar, .nav-links{
+    .navbar, 
+    .nav-links, 
+    .teams{
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-features{
+        margin: 20px;
+    }
 }
+/*medium device*/
+@media screen and (min-width:577px) and (max-width:992px){
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+}
+
+
+
+
