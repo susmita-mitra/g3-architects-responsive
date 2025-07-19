@@ -5,7 +5,10 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}/*shared styles*/
+}
+
+
+/*shared styles*/
 .display-flex{
     display: flex;
 }
@@ -137,6 +140,20 @@ font-size: 3rem;
     box-shadow:0 4px 30px 0 rgba(0, 0, 0, 0.06);
     margin-bottom: 20px;
 }
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700px;
+}
+.featured-architect img{
+    width: 100;
+}
 /*some fact related style*/
 .fact-container{
     display: grid;
@@ -183,7 +200,8 @@ font-size: 3rem;
 /*small device*/
 @media screen and (max-width:576px) {
     .navbar, 
-    .nav-links, 
+    .nav-links,
+    .feature, 
     .teams
     {
         flex-direction: column;
@@ -206,11 +224,15 @@ font-size: 3rem;
     .our-features{
         margin: 20px;
     }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
     
 }
 /*medium device*/
 @media screen and (min-width:577px) and (max-width:992px){
-    .teams{
+    .teams, .feature{
         flex-direction: column;
     }
     .our-features{
@@ -220,6 +242,10 @@ font-size: 3rem;
         grid-template-columns: repeat(2,1fr);
         gap: 50px;
         justify-items: center;
+    }
+     #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
 
